@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<def8583 encoding="GBK">   
+	<field id='0'   name='msgID'					type='const'  	sourceType='ascii'	 	sourceLength='4'/> <!-- 报文类型标识码 -->
+    <field id='1'   name='bIT_MAP'				    type='const'  	sourceType='byte'		sourceLength='16'/> <!-- 位图 -->
+    <field id='2'   name='primary_acct_num'		   	type='var2'   	sourceType='ascii'	 	length='19' sourceLengthType="ascii"/> <!-- 主帐号 -->
+    <field id='3'   name='processing_code'		    type='const'  	sourceType='ascii'	 	sourceLength='6'/> <!-- 交易处理吗 -->
+    <field id='4'   name='amt_trans'				type='const'  	sourceType='ascii'  	sourceLength='12' align="left"/> <!-- 交易金额 -->
+    <field id='5'   name='amt_settlmt'			    type='const'  	sourceType='ascii'	 	sourceLength='12' align="left"/> <!-- 清算金额 -->
+    <field id='6'   name='amt_cdhldr_bil'         	type='const'  	sourceType='ascii'	 	sourceLength='12' align="left"/> <!-- 持卡人扣账金额 -->
+    <field id='7'   name='transmsn_date_time'     	type='const'  	sourceType='ascii'  	sourceLength='10'/> <!-- 交易传输时间 MMDDhhmmss-->
+    <field id='8'   name='F8'					    type='const'  	sourceType='ascii'		sourceLength='10'/> <!-- 暂不使用 -->
+    <field id='9'   name='conv_rate_settlmt'      	type='const'  	sourceType='ascii'	 	sourceLength='8'/>  <!-- 清算汇率 *-->
+    <field id='10'  name='conv_rate_cdhldr_bil'   	type='const'  	sourceType='ascii'	 	sourceLength='8'/>  <!-- 持卡人扣款汇率 *-->
+    <field id='11'  name='cSeqNo'                 	type='const'  	sourceType='ascii'	 	sourceLength='6'/>  <!-- 系统跟踪号 -->
+    <field id='12'  name='time_local_trans'       	type='const'  	sourceType='ascii'	 	sourceLength='6'/>  <!-- 受卡方所在地时间 -->
+    <field id='13'  name='date_local_trans'       	type='const'  	sourceType='ascii'	 	sourceLength='4'/>  <!-- 受卡方所在地日期 -->
+    <field id='14'  name='date_expr'				type='const'  	sourceType='ascii'	 	sourceLength='4'/>  <!-- 卡有效期 -->
+    <field id='15'  name='date_settlmt'			    type='const'  	sourceType='ascii'	 	sourceLength='4'/>  <!-- 清算日期 -->
+    <field id='16'  name='date_conv'              	type='const'  	sourceType='ascii'	 	sourceLength='4'/>  <!-- 兑换日期 -->
+    <field id='17'  name='F17'					    type='const'  	sourceType='ascii'		sourceLength='4'/>  <!-- 中行交换中心的清算日期:暂不使用 -->
+    <field id='18'  name='mchnt_type'             	type='const'  	sourceType='ascii'	 	sourceLength='4'/>  <!-- 商户类型 -->
+    <field id='19'  name='acq_inst_cntry_code'    	type='const'  	sourceType='ascii'	 	sourceLength='3'/>  <!-- 受理机构国家代码 -->
+    <field id='20'  name='F20'					    type='const'  	sourceType='ascii'		sourceLength='3'/>  <!-- 暂不使用:暂不使用 -->
+    <field id='21'  name='F21'					    type='const'  	sourceType='ascii'		sourceLength='10'/> <!-- 暂不使用 -->
+    <field id='22'  name='pos_entry_mode_code'    	type='const'  	sourceType='ascii'	 	sourceLength='3'/>  <!-- 服务点输入方式码 -->
+    <field id='23'  name='card_seq_id'			    type='const'  	sourceType='ascii'	 	sourceLength='3'/>  <!-- 卡序列号 -->
+    <field id='24'  name='F24'					    type='const'  	sourceType='ascii'		sourceLength='2'/>  <!-- 国际网络标识域 -->
+    <field id='25'  name='pos_cond_code'          	type='const'  	sourceType='ascii'	 	sourceLength='2'/>  <!-- 服务点条件码 -->
+    <field id='26'  name='pos_pin_captr_code'     	type='const'  	sourceType='ascii'	 	sourceLength='2'/>  <!-- 服务点PIN获取码 -->
+    <field id='27'  name='F27'					    type='const'  	sourceType='ascii'	 	sourceLength='10'/> <!-- 暂不使用 -->
+    <field id='28'  name='amt_trans_fee'          	type='const'  	sourceType='ascii'  	sourceLength='9'/>  <!-- 交易费 有问题-->
+    <field id='29'  name='F29'					    type='const'  	sourceType='ascii'	 	sourceLength='10'/> <!-- 暂不使用 -->
+    <field id='30'  name='F30'					    type='const'  	sourceType='ascii'	 	sourceLength='10'/> <!-- 暂不使用 -->
+    <field id='31'  name='F31'					    type='const'  	sourceType='ascii'	 	sourceLength='10'/> <!-- 暂不使用 -->
+    <field id='32'  name='acq_inst_id_code'		   	type='var2'	  	sourceType='ascii'	 	length='11' sourceLengthType="ascii"/> <!--代理机构标识码 -->
+    <field id='33'  name='fwd_inst_id_code'		  	type='var2'   	sourceType='ascii'  	length='11' sourceLengthType="ascii"/> <!-- 发送机构标识码 -->
+    <field id='34'  name='F34'					    type='var2'   	sourceType='ascii'	 	length='28' sourceLengthType="ascii"/> <!-- 标识持卡人帐户或者关系:暂不使用 -->
+    <field id='35'  name='track_2_data'			    type='var2'   	sourceType='ascii'  	length='37' sourceLengthType="ascii"/> <!-- 第二磁道数据 -->
+    <field id='36'  name='track_3_data'			    type='var3'   	sourceType='ascii'	 	length='104' sourceLengthType="ascii"/><!-- 第三磁道数据 -->
+    <field id='37'  name='retrivl_ref_num'        	type='const'  	sourceType='ascii'	 	sourceLength='12'/> <!-- 检索参考号 -->
+    <field id='38'  name='authr_id_resp'          	type='const'  	sourceType='ascii'	 	sourceLength='6'/>  <!-- 授权标识应答码 -->
+    <field id='39'  name='cPSCOD1'				    type='const'  	sourceType='ascii'	 	sourceLength='2'/>  <!-- 应答码 -->
+    <field id='40'  name='F40'					    type='const'  	sourceType='ascii'	 	sourceLength='10'/> <!-- 暂不使用 -->
+    <field id='41'  name='termId'                 	type='const'  	sourceType='ascii'	 	sourceLength='8'/>  <!-- 受卡机终端标识码 -->
+    <field id='42'  name='mercId'                 	type='const'  	sourceType='ascii'	 	sourceLength='15'/> <!-- 受卡方标识码 -->
+    <field id='43'  name='card_accptr_name_loc'   	type='const'  	sourceType='ascii'	 	sourceLength='40'/> <!-- 卡接受者的名称和地址 -->
+    <field id='44'  name='addtnl_resp_code'		   	type='var2'   	sourceType='ascii'	 	length='25' sourceLengthType="ascii"/>    <!-- 附加响应数据 -->
+    <field id='45'  name='track_1_data'           	type='var2'   	sourceType='ascii'	 	length='79' sourceLengthType="ascii"/> <!-- 第一磁道数据 -->
+    <field id='46'  name='F46'					    type='const'  	sourceType='ascii'	 	sourceLength='10'/> <!-- 暂不使用 -->
+    <field id='47'  name='F47'					    type='const'  	sourceType='ascii'	 	sourceLength='10'/> <!-- 暂不使用 -->
+    <field id='48'  name='addtnl_data_private'    	type='var3'   	sourceType='ascii'	 	length='512'  sourceLengthType="ascii" />   <!-- 附加数据 -->
+    <field id='49'  name='currcy_code_trans'      	type='const'  	sourceType='ascii'	 	sourceLength='3'/>  <!-- 交易货币代码 -->
+    <field id='50'  name='currcy_code_settlmt'    	type='const'  	sourceType='ascii'	 	sourceLength='3'/>  <!-- 清算货币代码 -->
+    <field id='51'  name='currcy_code_cdhldr_bil' 	type='const'  	sourceType='ascii'	 	sourceLength='3'/>  <!-- 持卡人账户货币代码 -->
+    <field id='52'  name='cup_pin_data'			    type='const'  	sourceType='byte'		sourceLength='8'/>  <!-- 个人标识码数据 -->
+    <field id='53'  name='sec_relatd_ctrl_info'   	type='const'  	sourceType='ascii'  	sourceLength='16'/> <!-- 安全控制信息 -->
+    <field id='54'  name='addtnl_amt'			    type='var3'   	sourceType='ascii'	 	length='40'  sourceLengthType="ascii"/> <!-- 余额 -->
+    <field id='55'  name='iCC_data'				    type='var3'   	sourceType='ascii'	 	length='999' sourceLengthType="ascii" convert='hex'/> <!-- IC卡数据域 有问题-->
+    <field id='56'  name='F56'					    type='var3'   	sourceType='ascii'	 	length='999' sourceLengthType="ascii"/> <!-- 暂不使用 -->
+    <field id='57'  name='addtnl_data'            	type='var3'   	sourceType='ascii'	 	length='100' sourceLengthType="ascii"/> <!-- 附加交易信息 -->
+    <field id='58'  name='ic_pboc_data_resvd'	   	type='var3'	  	sourceType='ascii'	 	length='100' sourceLengthType="ascii"/> <!-- IC(PBOC)卡交易数据 -->
+    <field id='59'  name='detail_inqrng'			type='var3'   	sourceType='ascii'	 	length='600' sourceLengthType="ascii"/>   <!-- 明细查询数据 -->
+    <field id='60'  name='rsvDat'				    type='var3'   	sourceType='ascii'	 	length='100' sourceLengthType="ascii"/>  <!-- 自定义域 -->
+    <field id='61'  name='ch_auth_info'			    type='var3'	  	sourceType='ascii'	 	length='200' sourceLengthType="ascii"/>  <!-- 持卡人身份认证信息 -->
+    <field id='62'  name='switching_data'		    type='var3'   	sourceType='ascii'	 	length='200' sourceLengthType="ascii"/>  <!-- convert='hex' 交换中心数据 -->
+    <field id='63'  name='finacl_net_data'		    type='var3'   	sourceType='ascii'	 	length='200' sourceLengthType="ascii"/>  <!-- 金融网络数据 -->
+    <field id='64'  name='F64'					    type='const'  	sourceType='byte'		sourceLength='8'/> <!-- 消息签定码 -->
+    <field id='65'  name='F65'					    type='const'  	sourceType='ascii'	 	sourceLength='10'/> <!-- 暂不使用 -->
+    <field id='66'  name='F66'					    type='const'  	sourceType='ascii'	 	sourceLength='1'/>  <!-- 暂不使用 -->
+    <field id='67'  name='F67'					    type='const'  	sourceType='ascii'	 	sourceLength='10'/> <!-- 暂不使用 -->
+    <field id='68'  name='F68'					    type='const' 	sourceType='ascii'	 	sourceLength='10'/> <!-- 暂不使用 -->
+    <field id='69'  name='F69'					    type='const'  	sourceType='ascii'	 	sourceLength='10'/> <!-- 暂不使用 -->
+    <field id='70'  name='netwk_mgmt_info_code'   	type='const'  	sourceType='ascii'	 	sourceLength='3'/>  <!-- 网络管理信息码 -->
+    <field id='71'  name='F71'					    type='const'  	sourceType='ascii'		sourceLength='11'/> <!-- 暂不使用 -->
+    <field id='72'  name='F72'					    type='const'  	sourceType='ascii'		sourceLength='1'/>  <!-- 暂不使用 -->
+    <field id='73'  name='F73'					    type='const'  	sourceType='ascii'		sourceLength='4'/> <!-- 暂不使用 -->
+    <field id='74'  name='F74'					    type='var3'   	sourceType='ascii'	 	length='999' sourceLengthType="ascii"/> <!-- 暂不使用 -->
+    <field id='75'  name='F75'					    type='var3'   	sourceType='byte'		length='999' sourceLengthType="ascii"/> <!-- 暂不使用 -->
+    <field id='76'  name='F76'					    type='const'  	sourceType='ascii'		sourceLength='10'/> <!-- 暂不使用 -->
+    <field id='77'  name='F77'					    type='const'  	sourceType='ascii'		sourceLength='8'/>  <!-- 暂不使用 -->
+    <field id='78'  name='F78'					    type='const'  	sourceType='ascii'	 	sourceLength='10'/> <!-- 暂不使用 -->
+    <field id='79'  name='F79'					    type='const'  	sourceType='ascii'	 	sourceLength='10'/> <!-- 暂不使用 -->
+    <field id='80'  name='F80'					    type='const' 	sourceType='ascii'		sourceLength='10'/> <!-- 暂不使用 -->
+    <field id='81'  name='F81'					    type='const'  	sourceType='ascii'		sourceLength='10'/> <!-- 暂不使用 -->
+    <field id='82'  name='F82'					    type='const'  	sourceType='ascii'	 	sourceLength='12'/> <!-- 暂不使用 -->
+    <field id='83'  name='F83'					    type='const'  	sourceType='ascii'	 	sourceLength='10'/> <!-- 暂不使用 -->
+    <field id='84'  name='F84'					    type='const'  	sourceType='ascii'	 	sourceLength='12'/> <!-- 暂不使用 -->
+    <field id='85'  name='F85'					    type='const'  	sourceType='ascii'	 	sourceLength='10'/> <!-- 暂不使用 -->
+    <field id='86'  name='F86'					    type='const'  	sourceType='ascii'	 	sourceLength='16'/> <!-- 暂不使用 -->
+    <field id='87'  name='F87'					    type='const'  	sourceType='ascii'	 	sourceLength='16'/> <!-- 暂不使用 -->
+    <field id='88'  name='F88'					    type='var2'   	sourceType='ascii'	 	length='40' sourceLengthType="ascii"/> <!-- 暂不使用 -->
+    <field id='89'  name='F89'					    type='const'  	sourceType='ascii'		sourceLength='10'/> <!-- 暂不使用 -->
+    <field id='90'  name='orig_data_elemts'		   	type='const'  	sourceType='ascii'	 	sourceLength='42'/> <!-- 原始数据元 -->
+    <field id='91'  name='F91'					    type='const'  	sourceType='ascii'	 	sourceLength='10'/> <!-- 暂不使用 -->
+    <field id='92'  name='F92'					    type='const'  	sourceType='ascii'	 	sourceLength='10'/> <!-- 暂不使用 -->
+    <field id='93'  name='F93'					    type='const'  	sourceType='ascii'	 	sourceLength='10'/> <!-- 暂不使用 -->
+    <field id='94'  name='F94'					    type='const'  	sourceType='ascii'	 	sourceLength='10'/> <!-- 暂不使用 -->
+    <field id='95'  name='F95'					    type='const'  	sourceType='ascii'	 	sourceLength='42'/> <!-- 暂不使用 -->
+    <field id='96'  name='msg_security_code'		type='const'  	sourceType='byte'		sourceLength='8'/>  <!-- 报文安全码 -->
+    <field id='97'  name='F97'					    type='const'  	sourceType='ascii'	 	sourceLength='17'/> <!-- 暂不使用 -->
+    <field id='98'  name='F98'					    type='const'  	sourceType='ascii'	 	sourceLength='10'/> <!-- 暂不使用 -->
+    <field id='99'  name='F99'					    type='var2'   	sourceType='ascii'	 	length='11' sourceLengthType="ascii"/> <!-- 暂不使用 -->
+    <field id='100' name='rcvg_inst_id_code'		type='var2'   	sourceType='ascii'	 	length='11' sourceLengthType="ascii"/> <!-- 接收机构标识码 -->
+    <field id='101' name='F101'					    type='const'  	sourceType='ascii'	 	sourceLength='10'/> <!-- 暂不使用 -->
+    <field id='102' name='acct_id1'				    type='var2'   	sourceType='ascii'	 	length='28' sourceLengthType="ascii"/> <!-- 账户标识1 -->
+    <field id='103' name='acct_id2'				    type='var2'   	sourceType='ascii'	 	length='28' sourceLengthType="ascii"/> <!-- 账户标识2 -->
+    <field id='104' name='F104'					    type='const'  	sourceType='ascii'	 	sourceLength='16'/> <!-- 暂不使用 -->
+    <field id='105' name='F105'					    type='var3'   	sourceType='ascii'	 	length='320' sourceLengthType="ascii"/><!-- 暂不使用 -->
+    <field id='106' name='F106'					    type='const'  	sourceType='ascii'		sourceLength='2'/>  <!-- 暂不使用 -->
+    <field id='107' name='F107'					    type='var2'   	sourceType='ascii'	 	length='16' sourceLengthType="ascii"/> <!-- 暂不使用 -->
+    <field id='108' name='F108'					    type='const'  	sourceType='ascii' 	 	sourceLength='6' align="right"/> <!-- 暂不使用 -->
+    <field id='109' name='F109'					    type='const'  	sourceType='ascii'		sourceLength='1'/> <!-- 暂不使用 -->
+    <field id='110' name='F110'					    type='const'  	sourceType='ascii'		sourceLength='1'/> <!-- 暂不使用 -->
+    <field id='111' name='F111'					    type='var2'   	sourceType='ascii'	 	length='20'  sourceLengthType="ascii"/><!-- 暂不使用 -->
+    <field id='112' name='F112'					    type='var3'   	sourceType='ascii'	 	length='999' sourceLengthType="ascii"/> <!-- 暂不使用 -->
+    <field id='113' name='F113'					    type='const'  	sourceType='ascii'	 	sourceLength='6' align="left"/> <!-- 暂不使用 -->
+    <field id='114' name='F114'					    type='const'  	sourceType='ascii'	 	sourceLength='10' align="left"/> <!-- 暂不使用 -->
+    <field id='115' name='F115'					    type='const'  	sourceType='ascii'	 	sourceLength='10'/> <!-- 暂不使用 -->
+    <field id='116' name='F116'					    type='const'  	sourceType='ascii'	 	sourceLength='10'/> <!-- 暂不使用 -->
+    <field id='117' name='F117'					    type='const'  	sourceType='ascii'	 	sourceLength='10'/> <!-- 暂不使用 -->
+    <field id='118' name='F118'					    type='const'  	sourceType='ascii'	 	sourceLength='10'/> <!-- 暂不使用 -->
+    <field id='119' name='F119'					    type='const'  	sourceType='ascii'	 	sourceLength='10'/> <!-- 暂不使用 -->
+    <field id='120' name='F120'					    type='const'    sourceType='ascii'	 	sourceLength='10'/> <!-- 暂不使用 -->
+    <field id='121' name='national_sw_resved'	   	type='var3'   	sourceType='ascii'	 	length='100' sourceLengthType="ascii"/><!-- 银联处理中心保留 -->
+    <field id='122' name='reserved'		           	type='var3'   	sourceType='ascii'	 	length='100' sourceLengthType="ascii"/><!-- 受理方保留 -->
+    <field id='123' name='issr_inst_resvd'		    type='var3'     sourceType='ascii'	 	length='100' sourceLengthType="ascii"/><!-- 发卡方保留 -->
+    <field id='124' name='F124'					    type='const'    sourceType='ascii'	 	sourceLength='10'/> <!-- 暂不使用 -->
+    <field id='125' name='F125'					    type='const'  	sourceType='ascii'	 	sourceLength='10'/> <!-- 暂不使用 -->
+    <field id='126' name='F126'					    type='const'  	sourceType='ascii'	 	sourceLength='10'/> <!-- 暂不使用 -->
+    <field id='127' name='F127'					    type='const'  	sourceType='ascii'	 	sourceLength='10'/> <!-- 暂不使用 -->
+    <field id='128' name='MAC' 						type='const' 	sourceType='byte' 		sourceLength="8" convert="hex"/> <!-- 暂不使用 -->
+</def8583>
